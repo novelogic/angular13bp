@@ -20,6 +20,11 @@ ngOnInit(): void {
       complete: () => console.log('Observable completed')
   }
   );
+  of('Apple', 'Banana', 'pear').subscribe({
+    next: item => console.log(`fruit is ${item}`),
+    error: err => console.log(`error is ${err}`),
+    complete: () => console.log('Observable is Completed.')
+  });
 }
   aName = 'Angular ' + VERSION.major;
 }
